@@ -30,7 +30,7 @@ $ phpunit
 
 If you discover any security related issues, please email ryan@letsgolearn.com instead of using the issue tracker.
 
-## Credits
+## Authors
 
 - [Ryan Shofner][link-author]
 
