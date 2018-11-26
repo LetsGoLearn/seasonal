@@ -11,6 +11,15 @@ Via Composer
 $ composer require letsgolearn/seasonal
 ```
 
+## Usage
+
+```php
+    $location = new Location(new GeoIp, new SeasonalDateRanges);
+    $seasonal = new Seasonal($location);
+    
+    $seasonal->get(); // => WINTER
+```
+
 ## Testing
 
 ``` bash
