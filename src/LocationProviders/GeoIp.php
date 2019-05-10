@@ -19,7 +19,7 @@ class GeoIp implements Provider
      */
     public function getLocation(): array
     {
-        $reader = new Reader(__DIR__.'/../../resources/GeoIP2-City.mmdb');
+        $reader = new Reader(realpath(__DIR__.'/../../resources').'/GeoLite2-City.mmdb');
 
         $record = $reader->city($this->getIp());
 
@@ -40,6 +40,6 @@ class GeoIp implements Provider
             $ip = $_SERVER['REMOTE_ADDR'];
         }
 
-        return $ip;
+        return $ip == '127.0.0.1' ? '8.8.8.8' : $ip;
     }
 }
