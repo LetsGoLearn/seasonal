@@ -17,9 +17,10 @@ use LGL\Seasonal\LocationProviders\Provider;
 class Location
 {
     /**
-     * @var \LGL\Seasonal\LocationProviders\Provider
+     * @var Provider
      */
     protected $provider;
+
     /**
      * @var \LGL\Seasonal\SeasonalDateRanges
      */
@@ -50,18 +51,18 @@ class Location
     }
 
     /**
-     * @return \Seasonal\LocationProviders\Provider
+     * @return Provider
      */
-    public function getProvider(): \Seasonal\LocationProviders\Provider
+    public function getProvider(): Provider
     {
         return $this->provider;
     }
 
 
     /**
-     * @param \Seasonal\LocationProviders\Provider $provider
+     * @param Provider $provider
      */
-    public function setProvider(\Seasonal\LocationProviders\Provider $provider)
+    public function setProvider(Provider $provider)
     {
         $this->provider = $provider;
     }
