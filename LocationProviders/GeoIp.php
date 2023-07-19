@@ -19,7 +19,7 @@ class GeoIp implements Provider
      */
     public function getLocation(): array
     {
-        $reader = new Reader(realpath(__DIR__.'/../../resources').'/GeoLite2-City.mmdb');
+        $reader = new Reader(realpath(__DIR__.'/../resources').'/GeoLite2-City.mmdb');
 
         $record = $reader->city($this->getIp());
 
