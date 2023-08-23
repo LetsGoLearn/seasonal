@@ -8,6 +8,7 @@
 namespace LGL\Seasonal\LocationProviders;
 
 use GeoIp2\Database\Reader;
+use Illuminate\Support\Str;
 
 class GeoIp implements Provider
 {
@@ -40,6 +41,6 @@ class GeoIp implements Provider
             $ip = $_SERVER['REMOTE_ADDR'];
         }
 
-        return $ip == '127.0.0.1' ? '8.8.8.8' : $ip;
+        return Str::contains($ip,'127.0.0.1') ? '8.8.8.8' : $ip;
     }
 }
